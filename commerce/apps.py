@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class CommerceConfig(AppConfig):
     name = 'commerce'
-    verbose = 'E Commerce'
+    verbose_name = 'E Commerce'
