@@ -39,7 +39,14 @@ class CustomerAdmin(admin.ModelAdmin):
     get_last_login.admin_order_field = ('user__last_login')
 
 
+class OrderAdmin(admin.ModelAdmin):
+    fields = ('customer', 'item', 'quantity', 'processed')
+    list_display = ('customer', 'item', 'quantity', 'processed')
+    list_filter = ('processed',)
+
+
 # Register your models here.
 
 
 admin.site.register(models.Customer, CustomerAdmin)
+admin.site.register(models.Order, OrderAdmin)
