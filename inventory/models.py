@@ -5,8 +5,8 @@ from accounts.models import IncomeAccount
 # Create your models here.
 class Item(models.Model):
     name = models.CharField(max_length=100)
-    total_units = models.IntegerField()
-    remaining_units = models.IntegerField()
+    total_units = models.PositiveIntegerField()
+    remaining_units = models.PositiveIntegerField()
     unit_price = models.DecimalField(max_digits=12, decimal_places=2)
     description = models.TextField()
     account = models.ForeignKey(IncomeAccount)

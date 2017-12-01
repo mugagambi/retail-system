@@ -36,7 +36,7 @@ class CustomerAdmin(admin.ModelAdmin):
     get_date_joined.short_description = 'Date Joined'
     get_date_joined.admin_order_field = 'user__date_joined'
     get_last_login.short_description = 'Last Log In'
-    get_last_login.admin_order_field = ('user__last_login')
+    get_last_login.admin_order_field = ('user__last_login',)
 
 
 class OrderAdmin(admin.ModelAdmin):
